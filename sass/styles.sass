@@ -36,3 +36,14 @@ h2
 .esp-maior
   @include espacamento(blue, yellow, 50px, 50px)
   @include custom-border(double, black, 20px)
+
+$fonts: 40px, 60px, 100px
+
+@each $font in $fonts
+  .title-#{$font}
+    font-size: $font
+    line-height: $font * .2
+
+@for $i from 1 through 3
+  .paragrafo-#{$i}
+    border: custom-border-function($i)
