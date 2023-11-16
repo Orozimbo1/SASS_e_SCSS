@@ -9,10 +9,14 @@
 
 @function custom-border-function($variation: 1)
   $border: none
+  $var: 3
 
-  @if variation == 1
+  @if $variation < 1 or $variation > $var
+    // @error 'Insira variações até o número 3'
+    @warn 'O número máximo de variações é #{$var}. Insira um número entre 1 e 3'
+  @if $variation == 1
     $border: 1px solid red
-  @else if variation == 2
+  @else if $variation == 2
     $border: 2px solid green
   @else 
     $border: 3px dotted gold
