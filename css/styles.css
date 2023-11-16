@@ -7,4 +7,54 @@
   cursor: pointer;
 }
 
+body {
+  margin: 20px;
+}
+
+.p-esp {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+}
+.p-esp:hover {
+  color: blue;
+  border-color: blue;
+}
+
+h2 {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+  border-color: green;
+  color: green;
+  text-align: center;
+}
+h2:hover {
+  color: blue;
+  border-color: blue;
+}
+
+.esp-menor {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.esp-medio {
+  background-color: orange;
+  color: white;
+  padding: 30px;
+  margin: 30px;
+}
+
+.esp-maior {
+  background-color: blue;
+  color: yellow;
+  padding: 50px;
+  margin: 50px;
+}
+
 /*# sourceMappingURL=styles.css.map */

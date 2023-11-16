@@ -1,0 +1,21 @@
+@mixin especial
+  color: red
+  background-color: yellow
+  padding: 10px
+  border: 1px solid red
+
+  &:hover
+    color: blue
+    border-color: blue
+
+@mixin green
+  border-color: green
+  color: green
+  text-align: center
+  
+@mixin espacamento($bg, $color, $p, $m)
+  background-color: $bg
+  color: $color
+  padding: $p
+  margin: $m
+  

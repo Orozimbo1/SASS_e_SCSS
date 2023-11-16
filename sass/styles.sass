@@ -1,2 +1,22 @@
 @import 'variables'
 @import 'button'
+@import 'mixins'
+
+body
+  margin: 20px
+
+.p-esp
+  @include especial
+
+h2
+  @include especial
+  @include green
+
+.esp-menor
+  @include espacamento(yellow, black, 10px, 10px)
+    
+.esp-medio
+  @include espacamento(orange, white, 30px, 30px)
+
+.esp-maior
+  @include espacamento(blue, yellow, 50px, 50px)
