@@ -41,6 +41,7 @@ h2:hover {
   color: black;
   padding: 10px;
   margin: 10px;
+  border: 1px solid red;
 }
 
 .esp-medio {
@@ -48,6 +49,7 @@ h2:hover {
   color: white;
   padding: 30px;
   margin: 30px;
+  border: 2px dotted silver;
 }
 
 .esp-maior {
@@ -55,6 +57,7 @@ h2:hover {
   color: yellow;
   padding: 50px;
   margin: 50px;
+  border: 5px double black;
 }
 
 /*# sourceMappingURL=styles.css.map */
