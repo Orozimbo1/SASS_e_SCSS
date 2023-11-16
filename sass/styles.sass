@@ -2,6 +2,7 @@
 @import 'button'
 @import 'mixins'
 @import 'plugins'
+@import 'functions'
 
 body
   margin: 20px
@@ -12,6 +13,15 @@ body
 h2
   @include especial
   @include green
+
+.fonte-pequena
+  font-size: 5px
+  color: text-color(5)
+
+.fonte-grande
+  font-size: 30px
+  color: text-color(30)
+  border: custom-border-function(3)
 
 .esp-menor
   @include espacamento(yellow, black, 10px, 10px)

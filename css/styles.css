@@ -42,6 +42,17 @@ h2:hover {
   border-color: blue;
 }
 
+.fonte-pequena {
+  font-size: 5px;
+  color: blue;
+}
+
+.fonte-grande {
+  font-size: 30px;
+  color: red;
+  border: 3px dotted gold;
+}
+
 .esp-menor {
   background-color: yellow;
   color: black;
