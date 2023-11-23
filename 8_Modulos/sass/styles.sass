@@ -1,0 +1,104 @@
+// Modulo colors
+@use 'sass:color'
+@use 'sass:list'
+@use 'sass:map'
+@use 'sass:math'
+@use 'sass:meta'
+@use 'sass:string'
+
+$primary-color: #6b717f
+
+$color-adjust: color.adjust($primary-color, $green: 50)
+$color-scale: color.scale($primary-color, $lightness: -30%)
+$color-invert: color.invert($primary-color)
+$color-mix: color.mix($primary-color, $color-scale)
+$color-desaturate: desaturate($primary-color, 40%)
+$color-lighten: lighten($primary-color, 30%)
+
+.color-1
+  background-color: $color-adjust
+
+.color-2
+  background-color: $color-scale
+
+.color-3
+  background-color: $color-invert
+
+.color-4
+  background-color: $color-mix
+
+.color-5
+  background-color: $color-desaturate
+
+.color-6
+  background-color: $color-lighten
+
+@debug color.blue($color-adjust)
+@debug color.red($color-adjust)
+@debug color.green($color-adjust)
+
+// Modulo List
+$lista: 10px, 20px, 30px
+$lista2: 50px, 60px, 70px
+
+@debug $lista
+$lista: list.append($lista, 40px)
+  
+@debug $lista
+@debug list.index($lista, 20px)
+@debug list.index($lista, 50px)
+@debug list.join($lista, $lista2)
+@debug list.length($lista)
+@debug list.nth(list.join($lista, $lista2), 6)
+
+// Modulo Map
+$object: ('font': 3px, 'color': blue, 'bold': false)
+$object2: ('border': 2px solid red, 'transition': 1s)
+$object3: map.merge($object, $object2)
+
+@debug $object
+@debug $object2
+@debug $object3
+
+$border-title: map.get($object3, 'border')
+
+h1
+  border: $border-title
+
+@debug map.has-key($object3, 'transition')
+@debug map.has-key($object3, 'teste')
+
+// Modulo Math
+@debug math.$pi
+@debug math.ceil(math.$pi)
+@debug math.floor(math.$pi)
+
+$list: 1, 2, 3, 4
+
+@debug math.min($list...) // Precisa do spread operator
+@debug math.max($list...) // Precisa do spread operator
+@debug math.random()
+@debug math.floor(math.random() * 10)
+
+// Modulo Meta
+@mixin teste
+  margin: 0
+  padding: 0
+
+@debug meta.global-variable-exists('list')
+@debug meta.inspect($list)
+@debug meta.mixin-exists('teste')
+@debug meta.type-of('nao-existe')
+@debug meta.type-of(('ags': 2))
+@debug meta.type-of(2)
+@debug meta.type-of($list)
+@debug meta.type-of(#000)
+
+// Módulo String
+$str: 'Uma string'
+
+@debug string.index($str, 'a')
+@debug string.length($str)
+@debug string.to-upper-case($str)
+@debug string.to-lower-case($str)
+@debug string.unique-id()
